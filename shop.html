@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Gloo.shop</title>
+  </head>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let cartCount = 0; // Inisialisasi jumlah barang di keranjang
+      const cartCountElement = document.getElementById("cart-count");
+
+      // Event Listener untuk tombol "Tambah ke Keranjang"
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", function () {
+          cartCount++; // Tambah jumlah barang
+          cartCountElement.textContent = cartCount; // Update tampilan jumlah di ikon keranjang
+        });
+      });
+    });
+  </script>
+
+  <body>
+    <!-- Start Header/Navigation -->
+    <nav
+      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+      arial-label="Furni navigation bar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Gloo.shop<span>.</span></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsFurni"
+          aria-controls="navbarsFurni"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsFurni">
+          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="active">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li><a class="nav-link" href="about.html">About us</a></li>
+
+            <li><a class="nav-link" href="contact.html">Contact us</a></li>
+          </ul>
+
+          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <li>
+              <img
+                src="./images/cart.svg"
+                class="cart-icon"
+                onclick="openCart()"
+                alt="Cart"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Header/Navigation -->
+
+    <!-- Start Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5">
+            <div class="intro-excerpt">
+              <h1>Shop</h1>
+              <p class="mb-4">
+                🛋️ Temukan Furnitur Impian Anda Kami menghadirkan koleksi
+                furnitur berkualitas tinggi yang dirancang untuk memberikan
+                kenyamanan, fungsionalitas, dan estetika terbaik bagi rumah
+                Anda. Pilih dari berbagai kategori produk yang sesuai
+              </p>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="hero-img-wrap">
+              <img src="images/couch.png" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <div class="untree_co-section product-section before-footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Start Column 1 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-3.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Nordic</h3>
+              <strong class="product-price">$550</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Nordic ', 550)"
+                />
+              </span>
+            </a>
+          </div>
+
+          <!-- End Column 1 -->
+
+          <!-- Start Column 2 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-1.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Nordic Chair</h3>
+              <strong class="product-price"> $750</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Nordic Chair', 750)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 2 -->
+
+          <!-- Start Column 3 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-2.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Kruzo Aero Chair</h3>
+              <strong class="product-price">$125</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Kruzo Aero Chair', 125)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 3 -->
+
+          <!-- Start Column 4 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-3.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Ergonomic Chair</h3>
+              <strong class="product-price">$430</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Ergonomic Chair', 430)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 4 -->
+
+          <!-- Start Column 1 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-3.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Nordic Chair</h3>
+              <strong class="product-price">$590</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Nordic Chair', 590)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 1 -->
+
+          <!-- Start Column 2 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-1.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Nordic Chair</h3>
+              <strong class="product-price">$123</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Nordic Chair', 123)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 2 -->
+
+          <!-- Start Column 3 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-2.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Kruzo Chair</h3>
+              <strong class="product-price">$790</strong>
+
+              <span class="icon-cross">
+                <img src="images/cross.svg" class="img-fluid" />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 3 -->
+
+          <!-- Start Column 4 -->
+          <div class="col-12 col-md-4 col-lg-3 mb-5">
+            <a class="product-item">
+              <img
+                src="images/product-3.png"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Goad Chair</h3>
+              <strong class="product-price">$430</strong>
+
+              <span class="icon-cross">
+                <img
+                  src="images/cross.svg"
+                  class="img-fluid"
+                  onclick="addToCart('Goad Chair', 430)"
+                />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 4 -->
+        </div>
+      </div>
+    </div>
+    <!-- BAGIAN SINI -->
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>
+          <strong>Total: $<span id="total">0</span></strong>
+        </p>
+        <button onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <!--pos shoppingcart-->
+
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+      <div class="container relative">
+        <div class="sofa-img">
+          <img src="images/sofa.png" alt="Image" class="img-fluid" />
+        </div>
+
+        <div class="row g-5 mb-5">
+          <div class="col-lg-4">
+            <div class="mb-4 footer-logo-wrap">
+              <a href="#" class="footer-logo">Gloo.shop<span>.</span></a>
+            </div>
+            <p class="mb-4">
+              "Setiap rumah memiliki karakter dan cerita tersendiri, dan
+              Gloo.shop hadir untuk membantu Anda mewujudkan ruang impian yang
+              sesuai dengan gaya dan kebutuhan Anda. Dengan berbagai pilihan
+              furniture yang dirancang secara estetis, fungsional, dan
+              ergonomis, kami ingin menghadirkan pengalaman berbelanja yang
+              lebih mudah, menyenangkan, dan tentunya berkualitas untuk Anda dan
+              keluarga."
+            </p>
+
+            <ul class="list-unstyled custom-social">
+              <li>
+                <a href="#"><span class="fa fa-brands fa-facebook-f"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-brands fa-twitter"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-brands fa-instagram"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-brands fa-linkedin"></span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row links-wrap">
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li><a href="#">About us</a></li>
+
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Knowledge base</a></li>
+                  <li><a href="#">Live chat</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">Our team</a></li>
+                  <li><a href="#">Leadership</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                  <li><a href="#">Nordic Chair</a></li>
+                  <li><a href="#">Kruzo Aero</a></li>
+                  <li><a href="#">Ergonomic Chair</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-top copyright">
+          <div class="row pt-4">
+            <div class="col-lg-6">
+              <p class="mb-2 text-center text-lg-start">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                . All Rights Reserved. &mdash; Designed with love by
+                <a href="https://untree.co">Untree.co</a> Distributed By
+                <a href="https://themewagon.com">ThemeWagon</a>
+                <!-- License information: https://untree.co/license/ -->
+              </p>
+            </div>
+
+            <div class="col-lg-6 text-center text-lg-end">
+              <ul class="list-unstyled d-inline-flex ms-auto">
+                <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function addToCart(product, price) {
+        let item = cart.find((i) => i.product === product);
+        if (item) {
+          item.quantity += 1;
+        } else {
+          cart.push({ product, price, quantity: 1 });
+        }
+        saveCart();
+      }
+
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart();
+      }
+
+      function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        const total = document.getElementById("total");
+        cartItems.innerHTML = "";
+        let sum = 0;
+        cart.forEach((item, index) => {
+          let li = document.createElement("li");
+          li.className = "cart-item";
+          li.innerHTML = `${item.product} - $${item.price} 
+                    <button class="quantity-btn" onclick="changeQuantity(${index}, -1)">-</button>
+                    ${item.quantity}
+                    <button class="quantity-btn" onclick="changeQuantity(${index}, 1)">+</button>
+                    <span class="remove-btn" onclick="removeFromCart(${index})">&times;</span>`;
+          cartItems.appendChild(li);
+          sum += item.price * item.quantity;
+        });
+        total.textContent = sum;
+      }
+
+      function changeQuantity(index, amount) {
+        if (cart[index].quantity + amount > 0) {
+          cart[index].quantity += amount;
+        } else {
+          cart.splice(index, 1);
+        }
+        saveCart();
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        saveCart();
+      }
+
+      function openCart() {
+        updateCart();
+        document.getElementById("cartModal").style.display = "block";
+      }
+
+      function closeCart() {
+        document.getElementById("cartModal").style.display = "none";
+      }
+
+      //  GANTI SWEET ALERT //
+      function checkout() {
+        Swal.fire({
+          title: "Success!",
+          text: "Checkout successful!",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+        cart = [];
+        saveCart();
+      }
+      window.onload = updateCart;
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
